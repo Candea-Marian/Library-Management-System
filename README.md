@@ -40,19 +40,19 @@ In this section, I'll detail the problem-solving process for designing the Libra
 
 #### Conceptual Model 
 I considered the following:
-> - One book can have multiple authors
-> - One author can have multiple books
+> *** - One book can have multiple authors ***
+> *** - One author can have multiple books ***
 
-> - One book can have multiple editions/variations
-> - A book edition has a publisher
-> - A book edition has multiple copies/prints/items
+> *** - One book can have multiple editions/variations ***
+> *** - A book edition has a publisher ***
+> *** - A book edition has multiple copies/prints/items ***
 
-> - One book copy can have a lendig status that holds information like if its borrowed, when it was, the due & return date
+> *** - One book copy can have a lendig status that holds information like if its borrowed, when it was, the due & return date ***
 
-> - One account (librarian or patron) can borrow multiple books
-> - Multiple accounts can borrow the same book from one edition (unique book copies for each patron)
-> - One account has a single role of Librarian OR Patron
-> - One account has a adress and contact information
+> *** - One account (librarian or patron) can borrow multiple books ***
+> *** - Multiple accounts can borrow the same book from one edition (unique book copies for each patron) ***
+> *** - One account has a single role of Librarian OR Patron ***
+> *** - One account has a adress and contact information ***
 
 ![Database Schema](assets/drawSQLdesign.png)
 
