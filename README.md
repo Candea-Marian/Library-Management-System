@@ -58,13 +58,6 @@ I considered the following:
 
 #### Commentary:
 
-- **Book Table:** Represents the central information about books. The relationship with the `Author` table is established through a foreign key.
-
-- **Author Table:** Stores details about authors, allowing for a clean many-to-many relationship with the `Book` table.
-
-- **LendingStatus Table:** Captures borrowing activities with references to the `Account` and `BookItem` tables. Fines for late returns are calculated based on predefined rates.
-
-
 **The `Author` table** stores information about authors, including their first name, last name, date of birth, and biography. The `id` column acts as a unique identifier, and the table establishes a clean many-to-many relationship with the `Book` table through the `BookAuthor` junction table.
 
 **The `Book` table** represents central information about books in the library. It includes essential details such as the title and description. The `id` column serves as the primary key, uniquely identifying each book. The relationship with the `Author` table is established through the `book_author` junction table, enabling the representation of multiple authors for a single book.
