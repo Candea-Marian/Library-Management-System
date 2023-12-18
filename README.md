@@ -40,7 +40,7 @@ In this section, I'll detail the problem-solving process for designing the Libra
 
 #### Conceptual Model 
 I considered the following:
-> ** - One book can have multiple authors **
+> - **  One book can have multiple authors **
 > ** - One author can have multiple books **
 
 > ** - One book can have multiple editions/variations **
