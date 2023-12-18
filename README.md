@@ -64,5 +64,19 @@ I considered the following:
 
 - **LendingStatus Table:** Captures borrowing activities with references to the `Account` and `BookItem` tables. Fines for late returns are calculated based on predefined rates.
 
+
+**The `Author` table** stores information about authors, including their first name, last name, date of birth, and biography. The `id` column acts as a unique identifier, and the table establishes a clean many-to-many relationship with the `Book` table through the `BookAuthor` junction table.
+
+**The `Book` table** represents central information about books in the library. It includes essential details such as the title and description. The `id` column serves as the primary key, uniquely identifying each book. The relationship with the `Author` table is established through the `book_author` junction table, enabling the representation of multiple authors for a single book.
+
+**The `BookEdition` table** represents different editions/variants of a book. Each edition is identified by a unique ISBN, and the table includes information such as the publisher, language, and year of publication. The `BookEdition` table establishes a foreign key relationship with both the `Book` and `Publisher` tables, connecting editions to specific books and their respective publishers.
+
+**The `BookItem` table** represents physical copies of books available in the library. Each item is uniquely identified by the `id` column, and its condition is recorded. The `edition_id` foreign key links each item to a specific edition in the `BookEdition` table. This table is crucial for tracking the availability and condition of individual copies.
+
+**The `LendingStatus` table** captures the status of book borrowings. It includes details such as the creation date, due date, and return date. The `is_borrowed` column indicates whether a book item is currently borrowed. The foreign key relationships with the `Account` and `BookItem` tables enable tracking the borrowing activities of individual patrons and the associated book items.
+
+**The `Account` table** represents patrons and librarians in the system. It includes information such as username, name, contact details, and borrowing limits. The `role` column distinguishes between patrons and librarians. The `address_id` foreign key links each account to a specific address in the `Address` table.
+
+
 ## Class Diagram Design
 
