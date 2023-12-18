@@ -54,7 +54,7 @@ I considered the following:
 > - One account has a single role of Librarian OR Patron
 > - One account has a adress and contact information
 
-![Database Schema](link_to_database_schema_image.png)
+![Database Schema](assets/drawSQLdesign.png)
 
 #### Commentary:
 
