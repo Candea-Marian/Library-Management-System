@@ -47,6 +47,7 @@ I considered the following:
 > - One book can have multiple editions/variations
 > - A book edition has a publisher
 > - A book edition has multiple copies/prints/items
+>   - Recognizing the evolving nature of books, I want the system to accommodate the existence of multiple editions.
 
 > - One book copy can have a lendig status that holds information like if its borrowed, when it was, the due & return date
 
@@ -54,6 +55,7 @@ I considered the following:
 > - Multiple accounts can borrow the same book from one edition (unique book copies for each patron)
 > - One account has a single role of Librarian OR Patron
 > - One account has a adress and contact information
+>   -  I want the system to let one person (whether a librarian or a bookworm) borrow a bunch of books at once. Plus, multiple folks can grab the same book, but each gets their own copy.
 
 ![Database Schema](assets/drawSQLdesign.png)
 
