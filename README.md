@@ -72,6 +72,7 @@ I considered the following:
 
 * **The `Account` table** represents patrons and librarians in the system. It includes information such as username, name, contact details, and borrowing limits. The `role` column distinguishes between patrons and librarians. The `address_id` foreign key links each account to a specific address in the `Address` table.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Class Diagram Design
 
@@ -112,4 +113,4 @@ I considered the following:
   - **Relationships**:
     - The Feed class populates the eventual page with exciting books.
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
