@@ -75,3 +75,41 @@ I considered the following:
 
 ## Class Diagram Design
 
+![Class Diagram](assets/classDiagram.png)
+
+### 📚 Book Basics
+- **Book**: Each book has a title, description, ISBN, language, publisher, publication year, and a quantity (how many copies are available).
+- **BookCopy**: Think of these as the actual physical copies of the book. They have a unique ID, condition, and status (borrowed or not). You can borrow and return these copies.
+  - **Relationships**:
+    - A book can have multiple copies (BookCopy).
+    - A unique BookCopy can be borrowed by an Account, but multiple Accounts can't borrow the same BookCopy.
+
+### 📝 Author Details
+- **Author**: These are the cool people who write books. We know their first and last names, birthdate, a short bio, and the list of books they've written.
+  - **Relationships**:
+    - An Author can write multiple books.
+    - A Book can have multiple authors.
+
+### 🧑‍💻 User Details
+- **Account**: Users who borrow books. They have a username, personal info, and an address. An Account can have the role of Librarian or Patron. The librarian can borrow books too, because I'm biased and I want them to have perks like bigger borrowing limit or more available time for returning the books ;)
+
+### 📆 Keeping Track of Books
+- **BookLending**: Tracks when a book was borrowed, when it's due, and when it's returned.
+- **Notification**: Sends friendly messages to users about due dates, fines, and other updates.
+- **Fine and Transaction**: Handles fines and transactions associated with late returns.
+  - **Relationships**:
+    - If a BookCopy isn't returned on time, the associated Account will be fined and notified.
+
+### 📚 Library Management
+- **Librarian**: They can manage books, book copies, and users. They handle fines and transactions too.
+- **Patron**: Everyday users who borrow books. They have a joining date and a list of borrowed books.
+
+### 🔍 Searching and Feed
+- **Search Interface**: Helps you find books by title or author.
+  - **Relationships**:
+    - Users (Accounts) use the Search Interface to search for a book.
+- **Feed**: Like a news feed, but for books! It shows what the user is looking for.
+  - **Relationships**:
+    - The Feed class populates the eventual page with exciting books.
+
+
