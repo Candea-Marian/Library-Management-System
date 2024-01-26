@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 
 # Library Management System 
-(problem 1 for the Siemens internship challange)
 
 ## Scenario:
   You are tasked with designing a library management system for a university. The system should allow
